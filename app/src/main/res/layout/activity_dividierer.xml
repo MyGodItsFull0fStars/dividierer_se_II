@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:id="@+id/demoninator"
+        android:layout_below="@+id/numerator"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/numerator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/demoninator"/>
+
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/numerator"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/numerator"
+        android:layout_marginBottom="64dp"
+        android:ems="10"
+        android:inputType="numberDecimal"/>
+</RelativeLayout>
