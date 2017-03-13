@@ -32,11 +32,14 @@ public class MainActivity extends AppCompatActivity {
 		calculate.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				double nomD = Double.parseDouble(nominator.getText().toString());
-				double denomD = Double.parseDouble(denominator.getText().toString());
+
+				double nomD = 0.0;
+				double denomD = 0.0;
+
+				nomD = checkForInvalidInputAndInsertIntoDouble(nominator);
+				denomD = checkForInvalidInputAndInsertIntoDouble(denominator);
 
 				calculation(nomD, denomD);
-
 
 
 			}
@@ -50,15 +53,26 @@ public class MainActivity extends AppCompatActivity {
 
 
 		if (denominator == 0) {
-			resultView.setText(R.string.zero);
+			resultView.setText(R.string.zeroOrWrongInput);
 		} else {
 			result = nominator / denominator;
 			resultView.setText(Double.toString(result));
 		}
 
-
-
 	}
 
+	// Check with regex if input is double
+	// If not, zero will be returned to get error message
+	protected double checkForInvalidInputAndInsertIntoDouble(EditText checkText) {
+		String checkForDouble = checkText.getText().toString();
+		String regexPatternPoint = "-?([0-9]+[0-9]*\\.{1}[0-9]+[0-9]* | [0-9]+)";
+
+		String regexPatternInteger = "-?[0-9]";
+
+		if (checkForDouble.matches(regexPatternPoint) || checkForDouble.matches(regexPatternInteger)){
+			return Double.parseDouble(checkForDouble);
+		}
+		return 0.0;
+	}
 
 }
