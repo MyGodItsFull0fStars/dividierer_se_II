@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
 		denominator = (EditText) findViewById(R.id.denominator);
 		nominator = (EditText) findViewById(R.id.numerator);
+		resultView = (TextView) findViewById(R.id.result);
 
 
 		calculate = (Button) findViewById(R.id.calculate);
@@ -34,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
 				double nomD = Double.parseDouble(nominator.getText().toString());
 				double denomD = Double.parseDouble(denominator.getText().toString());
 
-				double result = calculation(nomD, denomD);
-				resultView.setText(Double.toString(result));
+				calculation(nomD, denomD);
+
+
 
 			}
 		});
@@ -43,17 +45,19 @@ public class MainActivity extends AppCompatActivity {
 
 
 	// Handles the calculation + exceptions
-	protected double calculation(double nominator, double denominator) {
+	protected void calculation(double nominator, double denominator) {
 		double result = 0.0;
 
 
 		if (denominator == 0) {
-			throw new ArithmeticException("Can't divide with zero!");
+			resultView.setText(R.string.zero);
 		} else {
 			result = nominator / denominator;
+			resultView.setText(Double.toString(result));
 		}
 
-		return result;
+
+
 	}
 
 
