@@ -13,6 +13,7 @@
         android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="Divisor"
+        android:textAlignment="center"
         android:inputType="numberDecimal"/>
 
     <EditText
@@ -24,16 +25,28 @@
         android:layout_marginTop="27dp"
         android:ems="10"
         android:hint="Dividend"
+        android:textAlignment="center"
         android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/demoninator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="@string/berechnen"/>
 
     <EditText
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ergebnis"
-        android:inputType="numberDecimal"
-        android:layout_below="@+id/demoninator"
         android:layout_alignStart="@+id/demoninator"
-        android:layout_marginTop="134dp"/>
+        android:layout_below="@+id/calculate"
+        android:layout_marginTop="68dp"
+        android:textAlignment="center"
+        android:ems="10"
+        android:hint="@string/ergebnis"
+        android:inputType="none"/>
+
 </RelativeLayout>

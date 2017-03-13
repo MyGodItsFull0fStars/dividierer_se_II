@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SE_II_Dividierer</string>
+    <string name="berechnen">Berechnen</string>
+    <string name="ergebnis">Ergebnis</string>
 </resources>
