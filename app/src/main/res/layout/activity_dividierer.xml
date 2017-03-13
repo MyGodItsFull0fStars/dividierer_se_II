@@ -5,33 +5,35 @@
 
 
     <EditText
+        android:id="@+id/demoninator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/numerator"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="64dp"
         android:ems="10"
-        android:inputType="numberDecimal"
-        android:id="@+id/demoninator"
-        android:layout_below="@+id/numerator"
-        android:layout_centerHorizontal="true"/>
+        android:hint="Divisor"
+        android:inputType="numberDecimal"/>
 
     <EditText
         android:id="@+id/numerator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/demoninator"
         android:layout_marginTop="27dp"
         android:ems="10"
-        android:inputType="numberDecimal"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/demoninator"/>
+        android:hint="Dividend"
+        android:inputType="numberDecimal"/>
 
     <EditText
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/numerator"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/numerator"
-        android:layout_marginBottom="64dp"
         android:ems="10"
-        android:inputType="numberDecimal"/>
+        android:hint="Ergebnis"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/demoninator"
+        android:layout_alignStart="@+id/demoninator"
+        android:layout_marginTop="134dp"/>
 </RelativeLayout>
