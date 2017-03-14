@@ -8,6 +8,11 @@ import android.widget.EditText;
 
 public class StringActivity {
 
+    /**
+     * Returns a valid double for calculation
+     * @param checkText
+     * @return
+     */
     protected double checkForInvalidInputAndInsertIntoDouble(EditText checkText) {
         String checkForDouble = stringCorrection(checkText.getText().toString());
         return Double.parseDouble(checkForDouble);
@@ -23,6 +28,12 @@ public class StringActivity {
 
     }
 
+    /**
+     * Corrects the String from EditText if needed.
+     *
+     * @param text from EditText
+     * @return corrected text
+     */
     protected String stringCorrection(String text) {
 
     // For better user experience, try to save as many wrong inputs as acceptable
@@ -50,7 +61,13 @@ public class StringActivity {
         return text;
     }
 
-    // Returns the index of a period or a comma, if none found returns -1.
+
+    /**
+     * Returns the index of a period or a comma, if none found returns -1.
+     *
+     * @param text
+     * @return
+     */
     private int findIndex(String text) {
         int index = -1;
 

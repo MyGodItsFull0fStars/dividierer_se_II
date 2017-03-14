@@ -46,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // Handles the calculation + exceptions
+    /**
+     * Calculation of division plus setting the text to the result TextView.
+     * If input is not allowed, error message @R.string.zeroOrWrongInput will be prompted.
+     * @param nominator
+     * @param denominator
+     */
     protected void calculation(double nominator, double denominator) {
         double result = 0.0;
 
@@ -58,6 +63,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
 
 }
