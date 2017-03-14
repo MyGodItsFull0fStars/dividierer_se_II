@@ -34,16 +34,17 @@ public class StringActivity {
                 text = "0" + text;
             }
             // If String starts with a comma, insert zero with a period instead
-            else if (text.charAt(0) == ',') {
-                text = "0." + text.substring(1);
+            else if (text.charAt(index) == ',') {
+                text = "0." + text.substring(index + 1);
             }
             // If String starts with minus and second char is a period, insert zero at second index and append substring.
-            else if (text.charAt(0) == '-' && text.charAt(1) == '.') {
-                text = text.charAt(0) + "0" + text.substring(1);
+            else if (text.charAt(0) == '-' && text.charAt(index + 1) == '.') {
+                text = text.charAt(index) + "0" + text.substring(index + 1);
             }
             // If String starts with minus and second char is a comma, insert zero and period in index 2&3 and append substring without comma.
-            else if (text.charAt(0) == '-' && text.charAt(1) == ',') {
-                text = text.charAt(0) + "0." + text.substring(2);
+            else if (text.charAt(0) == '-' && text.charAt(index + 1) == ',') {
+
+                text = text.charAt(index) + "0." + text.substring(index + 2);
             }
         }
         return text;

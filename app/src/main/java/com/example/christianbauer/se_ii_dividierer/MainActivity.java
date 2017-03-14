@@ -22,13 +22,13 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 
 
-		// Calculation starts here
+
 
 		denominator = (EditText) findViewById(R.id.denominator);
 		nominator = (EditText) findViewById(R.id.numerator);
 		resultView = (TextView) findViewById(R.id.result);
 
-
+        // Calculation starts here
 		calculate = (Button) findViewById(R.id.calculate);
 		calculate.setOnClickListener(new View.OnClickListener() {
 			@Override
