@@ -14,7 +14,8 @@
         android:ems="10"
         android:hint="Divisor"
         android:textAlignment="center"
-        android:inputType="numberDecimal"/>
+
+        android:inputType="numberDecimal|numberSigned"/>
 
     <EditText
         android:id="@+id/numerator"
@@ -26,7 +27,7 @@
         android:ems="10"
         android:hint="Dividend"
         android:textAlignment="center"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal|numberSigned"/>
 
     <Button
         android:id="@+id/calculate"
