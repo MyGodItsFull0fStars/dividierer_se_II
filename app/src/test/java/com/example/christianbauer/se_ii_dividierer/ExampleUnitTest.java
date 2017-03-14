@@ -20,6 +20,7 @@ public class ExampleUnitTest {
 	@Test
 	public void checkRegex() {
 		MainActivity mainActivity = new MainActivity();
+		StringActivity stringActivity  = new StringActivity();
 
 		String text = "0.0";
 		String wrong = "s.0";

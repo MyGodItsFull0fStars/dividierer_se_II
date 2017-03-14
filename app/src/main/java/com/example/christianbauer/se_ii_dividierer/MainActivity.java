@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 	EditText denominator;
 	TextView resultView;
 	Button calculate;
+	StringActivity stringActivity = new StringActivity();
 
 
 	@Override
@@ -36,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
 				double nomD = 0.0;
 				double denomD = 0.0;
 
-				nomD = checkForInvalidInputAndInsertIntoDouble(nominator);
-				denomD = checkForInvalidInputAndInsertIntoDouble(denominator);
+				nomD = stringActivity.checkForInvalidInputAndInsertIntoDouble(nominator);
+				denomD = stringActivity.checkForInvalidInputAndInsertIntoDouble(denominator);
 
 				calculation(nomD, denomD);
 
@@ -61,18 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
 	}
 
-	// Check with regex if input is double
-	// If not, zero will be returned to get error message
-	protected double checkForInvalidInputAndInsertIntoDouble(EditText checkText) {
-		String checkForDouble = checkText.getText().toString();
-		String regexPatternPoint = "-?([0-9]+[0-9]*\\.{1}[0-9]+[0-9]* | [0-9]+)";
 
-		String regexPatternInteger = "-?[0-9]";
 
-		if (checkForDouble.matches(regexPatternPoint) || checkForDouble.matches(regexPatternInteger)){
-			return Double.parseDouble(checkForDouble);
-		}
-		return 0.0;
-	}
 
 }
