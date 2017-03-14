@@ -32,4 +32,20 @@ public class ExampleUnitTest {
 		Assert.assertFalse(wrong.matches(regexPattern));
 		Assert.assertTrue(number.matches(regexInt));
 	}
+
+	@Test
+	public void checkStringCorrectionMethod() {
+		StringActivity stringActivity = new StringActivity();
+
+		String text = "0.0";
+		String number = "1";
+		String periodWrongText = ".0";
+		String commaWrongText = ",0";
+
+		Assert.assertEquals(text, stringActivity.stringCorrection(text));
+		Assert.assertEquals(text, stringActivity.stringCorrection(periodWrongText));
+		Assert.assertEquals(text, stringActivity.stringCorrection(commaWrongText));
+		Assert.assertEquals(number, stringActivity.stringCorrection(number));
+
+	}
 }
